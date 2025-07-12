@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Case Study Feedback</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 2rem;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    h2 {
+      color: #34495e;
+      margin-top: 2rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    .reference-list {
+      margin-top: 2rem;
+      padding-left: 1.5rem;
+    }
+    .reference-list li {
+      margin-bottom: 0.75rem;
+    }
+    .highlight {
+      background-color: #e8f0fe;
+      padding: 1rem;
+      border-left: 4px solid #3b82f6;
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Response to Abusive Workplace Behavior Case Study</h1>
+
+  <div class="highlight">
+    <p><strong>Thank you, Bing Hung Lui</strong>, for your contribution to the analysis of the Abusive Workplace Behavior case study. Your work demonstrates a strong understanding of the ethical concerns raised by the situation and commendably applies the BCS Codes of Conduct.</p>
+  </div>
+
+  <p>Your discussion of legal implications is insightful, particularly your mention of civil liability and vicarious responsibility. However, this could be further strengthened by referencing legal frameworks or case law relevant to workplace harassment, as highlighted by <strong>Wible (2003)</strong>. The reference to Hong Kong’s Equal Opportunities Commission is contextually appropriate; however, the analysis would benefit from deeper engagement with local legislation such as the <em>Sex Discrimination Ordinance</em>.</p>
+
+  <p>The recognition of toxic corporate culture and the call for organisational reform is well-placed. Grounding this in scholarly literature on workplace bullying and organisational behaviour would enhance the critique, as observed by <strong>Salin (2003)</strong>.</p>
+
+  <p>I strongly support your suggestion for mediation, which is a highly constructive approach. This aligns with best practices in workplace conflict resolution, as highlighted by <strong>Yin et al. (2022)</strong>, who emphasize the importance of fostering a positive conflict management climate to reduce workplace bullying and enhance employee engagement.</p>
+
+  <p>Your evaluation of professionalism and ethical breaches is valid and broadly considered. However, <strong>Tenbrunsel and Messick (2004)</strong> shed more light on this by introducing the concept of ethical fading and how professionals like Max and Jean might rationalise unethical conduct under pressure.</p>
+
+  <p>Finally, your comparison with the BCS Code is thoughtful and accurate. Your analysis underscores the importance of moving beyond legal compliance to achieve genuine cultural transformation.</p>
+
+  <h2>References</h2>
+  <ul class="reference-list">
+    <li>Salin, D. (2003). ‘Ways of explaining workplace bullying: A review of enabling, motivating and precipitating structures and processes in the work environment’, <em>Human Relations</em>, 56(10), pp. 1213–1232. <a href="https://doi.org/10.1177/00187267035610003" target="_blank">https://doi.org/10.1177/00187267035610003</a></li>
+
+    <li>Tenbrunsel, A.E. and Messick, D.M. (2004). ‘Ethical fading: The role of self-deception in unethical behavior’, <em>Social Justice Research</em>, 17(2), pp. 223–236. <a href="https://doi.org/10.1023/B:SORE.0000027411.35832.53" target="_blank">https://doi.org/10.1023/B:SORE.0000027411.35832.53</a></li>
+
+    <li>Wible, B. (2003). ‘A site where hackers are welcome: Using hack-in contests to shape preferences and deter computer crime’, <em>Yale Law Journal</em>, 112(6), pp. 1577–1624. <a href="https://doi.org/10.2307/3657453" target="_blank">https://doi.org/10.2307/3657453</a></li>
+
+    <li>Yin, J. et al. (2022). ‘Exploring the relationships between team leader’s conflict management styles and team passion: From the emotional perspective’, <em>Frontiers in Psychology</em>, 13, p. 921300. <a href="https://doi.org/10.3389/FPSYG.2022.921300" target="_blank">https://doi.org/10.3389/FPSYG.2022.921300</a></li>
+  </ul>
+
+</body>
+</html>
