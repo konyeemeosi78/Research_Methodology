@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Weight Loss Analysis</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .data-section { width: 100%; max-width: 600px; margin-bottom: 20px; }
+        .chart-section { width: 100%; max-width: 600px; margin-bottom: 20px; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        p { margin: 10px 0; }
+        img { max-width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+    <div class="data-section">
+        <!-- Frequency and Statistics Table -->
+        <table>
+            <tr><th>Diet</th><th>Wtloss</th><th></th><th></th><th></th><th></th><th></th><th>Upper Bin Limit</th><th>Frequency</th><th></th><th>Relative</th><th></th><th></th></tr>
+            <tr><td>A</td><td>3.709</td><td></td><td></td><td></td><td></td><td></td><td>-4</td><td>1</td><td>0.02</td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>7.087</td><td></td><td>Diet A</td><td></td><td></td><td></td><td>-2</td><td>0</td><td>0</td><td>Frequency</td><td></td><td></td></tr>
+            <tr><td>A</td><td>6.754</td><td></td><td></td><td>Mean</td><td>5.341199999999999</td><td></td><td>0</td><td>2</td><td>0.04081632653061224</td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>8.994</td><td></td><td></td><td>SD</td><td>2.5356026132351492</td><td></td><td>2</td><td>10</td><td>0.2127659574468085</td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>9.077</td><td>Mean</td><td>3.709960000000001</td><td></td><td></td><td></td><td>4</td><td>15</td><td>0.40540540540540543</td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>6.413</td><td>SD</td><td>2.7690419986349206</td><td></td><td></td><td></td><td>6</td><td>11</td><td>0.5</td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>5.877</td><td>MIN</td><td>-4.148</td><td></td><td></td><td></td><td>8</td><td>8</td><td>0.7272727272727273</td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>2.572</td><td>MAX</td><td>10.539</td><td></td><td></td><td></td><td>10</td><td>2</td><td>0.6666666666666666</td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>7.52</td><td>RANGE</td><td>14.687</td><td></td><td></td><td></td><td>12</td><td>1</td><td>1</td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>6.881</td><td></td><td></td><td></td><td></td><td></td><td>0</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>7.265</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>3.477</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>3.755</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>8.76</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>7.032</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>9.052</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>10.062</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>4.84</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>6.449</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>9.019</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>-1.715</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>4.718</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>4.007</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>7.241</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>2.128</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>6.968</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>4.853</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>0.055</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>2.68</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>3.746</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>7.033</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>5.033</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>5.569</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>6.712</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>3.663</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>2.741</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>6.256</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>5.349</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>7.3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>5.445</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>4.97</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>3.613</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>7.568</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>5.861</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>4.157</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>0.203</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>4.441</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>5.875</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>5.715</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A</td><td>0.28</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>-1.087</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>1.819</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>0.074</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>1.755</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>1.889</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>3.089</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>4.008</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>4.551</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>1.372</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>3.413</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>-4.148</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>2.823</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>2.865</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>4.369</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>6.337</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>6.308</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>3.494</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>10.539</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>3.84</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>5.123</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>5.485</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>-1.894</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>8.016</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>2.31</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>3.882</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>7.03</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>7.727</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>0.105</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>3.65</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>4.547</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>4.985</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>5.159</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>4.76</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>4.934</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>3.106</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>5.598</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>2.162</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>6.52</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>7.046</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>1.757</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>1.848</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>1.096</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>2.145</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>8.435</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>6.099</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>3.972</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>2.409</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>0.569</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>7.013</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B</td><td>2.594</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </table>
+    </div>
+    <div class="chart-section">
+        <!-- Chart Image -->
+        <h2>Relative Frequency Histogram</h2>
+        <img src="https://raw.githubusercontent.com/konyeemeosi78/Research_Methodology/main/images/reletive_frequency.png" alt="Relative Frequency of Weight Loss">
+    </div>
+
+    <!-- Interpretation -->
+    <p>The histogram for Diet B shows a right-skewed distribution, with the majority of weight loss values concentrated between 2 and 9 kg, peaking around 7–8 kg. Small frequencies at negative values (e.g., -4 to -1 kg) indicate some weight gain or minimal loss, while the highest frequencies (around 5–9 kg) suggest significant weight loss for many participants. The mean of 3.710 kg reflects a moderate average loss, influenced by a few higher losses, indicating moderate variability.</p>
+    <p>For Diet A (Mean = 5.3412 kg, SD = 2.5356), the higher mean and lower standard deviation suggest a more consistent weight loss, likely peaking around 5–6 kg with less variability and fewer instances of weight gain (min = -1.715). These results indicate Diet A is more reliable for achieving moderate to high weight loss across participants, while Diet B shows greater variability, with some achieving substantial losses (up to 9 kg) but others experiencing weight gain, suggesting less consistency.</p>
+</body>
+</html>
