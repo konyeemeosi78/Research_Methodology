@@ -1,73 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Excel Workbook Representation</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin-bottom: 40px;
-    }
-    th, td {
-      border: 1px solid #333;
-      padding: 8px;
-      text-align: left;
-    }
-    img.chart {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 40px;
-      border: 1px solid #ccc;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Preferences with Charts</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { border-collapse: collapse; width: 100%; max-width: 600px; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        p { margin: 10px 0; }
+        img { max-width: 600px; margin: 20px 0; }
+    </style>
 </head>
 <body>
+    <!-- Frequency Table -->
+    <table>
+        <tr><th>Area</th><th>Brand</th><th></th><th></th><th></th></tr>
+        <tr><td>1</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td>Frequencies</td><td></td></tr>
+        <tr><td>1</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>B</td><td></td><td>Area 1</td><td>Area 2</td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td>A</td><td>11</td><td>19</td></tr>
+        <tr><td>1</td><td>A</td><td></td><td>B</td><td>17</td><td>30</td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td>Other</td><td>42</td><td>41</td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td>Total</td><td>70</td><td>90</td></tr>
+    </table>
 
-  <h1>Excel Workbook Table and Charts</h1>
+    <!-- Percentage Table -->
+    <table>
+        <tr><td>1</td><td>B</td><td></td><td>Percentages</td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td>Area 1</td><td>Area 2</td></tr>
+        <tr><td>1</td><td>A</td><td></td><td>A</td><td>15.714285714285714</td><td>21.1</td></tr>
+        <tr><td>1</td><td>A</td><td></td><td>B</td><td>24.285714285714285</td><td>33.3</td></tr>
+        <tr><td>1</td><td>A</td><td></td><td>Other</td><td>60</td><td>45.6</td></tr>
+        <tr><td>1</td><td>B</td><td></td><td>Total</td><td>100</td><td>100</td></tr>
+    </table>
 
-  <!-- Table starts here -->
-  <table>
-    <tr>
-      <td>Area</td>
-      <td>Brand</td>
-      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-      <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-    </tr>
-    <tr>
-      <td>1</td><td>B</td>
-      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-      <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-    </tr>
-    <tr>
-      <td>1</td><td>Other</td><td></td><td>Frequencies</td>
-      <td></td><td></td><td></td><td></td><td></td>
-      <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-    </tr>
-    <tr>
-      <td>1</td><td>A</td>
-      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-      <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-    </tr>
-    <tr>
-      <td>1</td><td>B</td>
-      <td></td><td></td><td>Area 1</td><td>Area 2</td>
-      <td></td><td></td><td></td><td></td><td></td><td></td>
-      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-    </tr>
-  </table>
+    <!-- Chart Images -->
+    <h2>Area 1</h2>
+    <img src="https://raw.githubusercontent.com/your-username/your-repo/main/images/area1_chart.png" alt="Area 1 Brand Preference Chart">
+    <h2>Area 1 vs Area 2</h2>
+    <img src="https://raw.githubusercontent.com/your-username/your-repo/main/images/area1_vs_area2_chart.png" alt="Area 1 vs Area 2 Brand Preference Chart">
 
-  <!-- Charts -->
-  <h2>Chart 1</h2>
-  <img src="chart_1.png" alt="Chart 1" class="chart">
+    <!-- Interpretation -->
+    <p>Interpretation of Brand Preference Patterns</p>
+    <p>The bar chart for Area 2 illustrates the percentage distribution of brand preferences: Brand A (21.1%), Brand B (33.3%), and Other (45.6%). Comparing this to Area 1 (Brand A: 15.71%, Brand B: 24.29%, Other: 60%), the following patterns emerge:</p>
+    <p>Dominance of Other: In both areas, "Other" is the most preferred category, but its share is lower in Area 2 (45.6%) than in Area 1 (60%). This indicates that while "Other" remains popular, its dominance is less pronounced in Area 2.</p>
+    <p>Increased Preference for A and B: Area 2 shows higher preferences for Brand A (21.1% vs. 15.71%) and Brand B (33.3% vs. 24.29%) compared to Area 1. This suggests that these brands have a stronger foothold in Area 2.</p>
+    <p>Market Dynamics: The more balanced distribution in Area 2, with higher percentages for Brands A and B, points to a potentially more competitive market for these brands compared to Area 1, where "Other" has a larger lead. This could reflect differences in consumer preferences, marketing efforts, or brand availability between the two areas.</p>
+    <p>These findings suggest that Brands A and B are more competitive in Area 2, which could guide targeted marketing strategies to further strengthen their presence in that region.</p>
 
-  <h2>Chart 2</h2>
-  <img src="chart_2.png" alt="Chart 2" class="chart">
-
+    <!-- Remaining Data -->
+    <table>
+        <tr><td>1</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>1</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>A</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>B</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>Other</td><td></td><td></td><td></td></tr>
+    </table>
 </body>
 </html>
