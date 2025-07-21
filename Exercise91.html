@@ -3,166 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brand Preference Data</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Columns A and B</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      font-family: Arial, sans-serif;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 font-sans">
-  <div class="container mx-auto p-6">
-    <table class="table-auto w-full bg-white shadow-md rounded-lg overflow-hidden">
-      <tbody>
-        <!-- Row 3: Frequencies header -->
-        <tr>
-          <td class="border px-4 py-2">1</td>
-          <td class="border px-4 py-2">Other</td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2 font-bold">Frequencies</td>
-          <td class="border px-4 py-2"></td>
-        </tr>
-        <!-- Row 4: Empty row -->
-        <tr>
-          <td class="border px-4 py-2">1</td>
-          <td class="border px-4 py-2">A</td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2"></td>
-        </tr>
-        <!-- Row 5: Area headers -->
-        <tr>
-          <td class="border px-4 py-2">1</td>
-          <td class="border px-4 py-2">B</td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2 font-bold">Area 1</td>
-          <td class="border px-4 py-2 font-bold">Area 2</td>
-        </tr>
-        <!-- Row 6: Brand A frequencies -->
-        <tr>
-          <td class="border px-4 py-2">1</td>
-          <td class="border px-4 py-2">Other</td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2 text-center">11</td>
-          <td class="border px-4 py-2 text-center">19</td>
-        </tr>
-        <!-- Row 7: Brand B frequencies -->
-        <tr>
-          <td class="border px-4 py-2">1</td>
-          <td class="border px-4 py-2">A</td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2 text-center">17</td>
-          <td class="border px-4 py-2 text-center">30</td>
-        </tr>
-        <!-- Row 8: Other frequencies -->
-        <tr>
-          <td class="border px-4 py-2">1</td>
-          <td class="border px-4 py-2">Other</td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2 text-center">42</td>
-          <td class="border px-4 py-2 text-center">41</td>
-        </tr>
-        <!-- Row 9: Total frequencies -->
-        <tr>
-          <td class="border px-4 py-2">1</td>
-          <td class="border px-4 py-2">Other</td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2 text-center font-bold">70</td>
-          <td class="border px-4 py-2 text-center font-bold">90</td>
-        </tr>
-        <!-- Row 10: Empty row -->
-        <tr>
-          <td class="border px-4 py-2">1</td>
-          <td class="border px-4 py-2">Other</td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2"></td>
-        </tr>
-        <!-- Row 11: Empty row -->
-        <tr>
-          <td class="border px-4 py-2">1</td>
-          <td class="border px-4 py-2">Other</td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2"></td>
-        </tr>
-        <!-- Row 12: Percentages header -->
-        <tr>
-          <td class="border px-4 py-2">1</td>
-          <td class="border px-4 py-2">B</td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2 font-bold">Percentages</td>
-          <td class="border px-4 py-2"></td>
-        </tr>
-        <!-- Row 13: Empty row -->
-        <tr>
-          <td class="border px-4 py-2">1</td>
-          <td class="border px-4 py-2">Other</td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2"></td>
-        </tr>
-        <!-- Row 14: Area headers -->
-        <tr>
-          <td class="border px-4 py-2">1</td>
-          <td class="border px-4 py-2">Other</td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2 font-bold">Area 1</td>
-          <td class="border px-4 py-2 font-bold">Area 2</td>
-        </tr>
-        <!-- Row 15: Brand A percentages -->
-        <tr>
-          <td class="border px-4 py-2">1</td>
-          <td class="border px-4 py-2">A</td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2 text-center">15.714285714285714</td>
-          <td class="border px-4 py-2 text-center">21.1</td>
-        </tr>
-        <!-- Row 16: Brand B percentages -->
-        <tr>
-          <td class="border px-4 py-2">1</td>
-          <td class="border px-4 py-2">A</td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2 text-center">24.285714285714285</td>
-          <td class="border px-4 py-2 text-center">33.3</td>
-        </tr>
-        <!-- Row 17: Other percentages -->
-        <tr>
-          <td class="border px-4 py-2">1</td>
-          <td class="border px-4 py-2">A</td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2 text-center">60</td>
-          <td class="border px-4 py-2 text-center">45.6</td>
-        </tr>
-        <!-- Row 18: Total percentages -->
-        <tr>
-          <td class="border px-4 py-2">1</td>
-          <td class="border px-4 py-2">B</td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2 text-center font-bold">100</td>
-          <td class="border px-4 py-2 text-center font-bold">100</td>
-        </tr>
-        <!-- Spacer row -->
-        <tr>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2"></td>
-        </tr>
-        <!-- Interpretation text -->
-        <tr>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2 text-gray-600">
-            <strong>Interpretation of Brand Preference Patterns</strong><br><br>
-            The bar chart for Area 2 illustrates the percentage distribution of brand preferences: Brand A (21.1%), Brand B (33.3%), and Other (45.6%). Comparing this to Area 1 (Brand A: 15.71%, Brand B: 24.29%, Other: 60%), the following patterns emerge:<br><br>
-            <strong>Dominance of Other:</strong> In both areas, "Other" is the most preferred category, but its share is lower in Area 2 (45.6%) than in Area 1 (60%). This indicates that while "Other" remains popular, its dominance is less pronounced in Area 2.<br><br>
-            <strong>Increased Preference for A and B:</strong> Area 2 shows higher preferences for Brand A (21.1% vs. 15.71%) and Brand B (33.3% vs. 24.29%) compared to Area 1. This suggests that these brands have a stronger foothold in Area 2.<br><br>
-            <strong>Market Dynamics:</strong> The more balanced distribution in Area 2, with higher percentages for Brands A and B, points to a potentially more competitive market for these brands compared to Area 1, where "Other" has a larger lead. This could reflect differences in consumer preferences, marketing efforts, or brand availability between the two areas.<br><br>
-            These findings suggest that Brands A and B are more competitive in Area 2, which could guide targeted marketing strategies to further strengthen their presence in that region.
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+<body>
+  <table>
+    <tr>
+      <th>Area</th>
+      <th>Brand</th>
+    </tr>
+    <tr><td>1</td><td>B</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>A</td></tr>
+    <tr><td>1</td><td>B</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>A</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>B</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>B</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>B</td></tr>
+    <tr><td>1</td><td>B</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>B</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>A</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>A</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>A</td></tr>
+    <tr><td>1</td><td>A</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>B</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>B</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>Other</td></tr>
+    <tr><td>1</td><td>B</td></tr>
+    <tr><td>2</td><td>A</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>A</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>A</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>A</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>A</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>A</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>A</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>A</td></tr>
+    <tr><td>2</td><td>A</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>A</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>A</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>A</td></tr>
+    <tr><td>2</td><td>A</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>A</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>A</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>A</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>A</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>A</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>A</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>B</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+    <tr><td>2</td><td>Other</td></tr>
+  </table>
 </body>
 </html>
