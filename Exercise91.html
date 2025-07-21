@@ -1,334 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brand Preference Report</title>
-    <!-- Including Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Including required libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.8.1/prop-types.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
-    <script src="https://unpkg.com/papaparse@latest/papaparse.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chrono-node/1.3.11/chrono.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/recharts/2.15.0/Recharts.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Preference Data</title>
+  <!-- Including Tailwind CSS for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 font-sans">
-    <div id="root"></div>
-    <script type="text/babel">
-        // Initializing React root
-        const root = ReactDOM.createRoot(document.getElementById('root'));
+  <div class="container mx-auto p-6">
+    <!-- Frequencies Table -->
+    <div class="mb-8">
+      <h2 class="text-xl font-bold text-gray-800 mb-2">Frequencies</h2>
+      <table class="table-auto w-full bg-white shadow-md rounded-lg overflow-hidden">
+        <thead>
+          <tr class="bg-gray-200">
+            <th class="px-4 py-2"></th>
+            <th class="px-4 py-2">Area 1</th>
+            <th class="px-4 py-2">Area 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-4 py-2">A</td>
+            <td class="border px-4 py-2 text-center">11</td>
+            <td class="border px-4 py-2 text-center">19</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">B</td>
+            <td class="border px-4 py-2 text-center">17</td>
+            <td class="border px-4 py-2 text-center">30</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Other</td>
+            <td class="border px-4 py-2 text-center">42</td>
+            <td class="border px-4 py-2 text-center">41</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2 font-bold">Total</td>
+            <td class="border px-4 py-2 text-center font-bold">70</td>
+            <td class="border px-4 py-2 text-center font-bold">90</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-        // Defining the main App component
-        function App() {
-            const [data, setData] = React.useState(null);
-            const [loading, setLoading] = React.useState(true);
+    <!-- Percentages Table -->
+    <div class="mb-8">
+      <h2 class="text-xl font-bold text-gray-800 mb-2">Percentages</h2>
+      <table class="table-auto w-full bg-white shadow-md rounded-lg overflow-hidden">
+        <thead>
+          <tr class="bg-gray-200">
+            <th class="px-4 py-2"></th>
+            <th class="px-4 py-2">Area 1</th>
+            <th class="px-4 py-2">Area 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-4 py-2">A</td>
+            <td class="border px-4 py-2 text-center">15.714285714285714</td>
+            <td class="border px-4 py-2 text-center">21.1</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">B</td>
+            <td class="border px-4 py-2 text-center">24.285714285714285</td>
+            <td class="border px-4 py-2 text-center">33.3</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Other</td>
+            <td class="border px-4 py-2 text-center">60</td>
+            <td class="border px-4 py-2 text-center">45.6</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2 font-bold">Total</td>
+            <td class="border px-4 py-2 text-center font-bold">100</td>
+            <td class="border px-4 py-2 text-center font-bold">100</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-            // Loading and parsing the CSV data
-            React.useEffect(() => {
-                const csvData = `Area,Brand,,,,
-1,B,,,,
-1,Other,,Frequencies,,
-1,A,,,,
-1,B,,,Area 1,Area 2
-1,Other,,A,11,19
-1,A,,B,17,30
-1,Other,,Other,42,41
-1,Other,,Total,70,90
-1,Other,,,,
-1,Other,,,,
-1,B,,Percentages,,
-1,Other,,,,
-1,Other,,,Area 1,Area 2
-1,A,,A,15.714285714285714,21.1
-1,A,,B,24.285714285714285,33.3
-1,A,,Other,60,45.6
-1,B,,Total,100,100
-${Array(46).fill('1,Other,,,,').join('\n')}
-1,A,,,,
-1,Other,,,,
-1,A,,,,
-1,Other,,,,
-1,Other,,,,
-1,Other,,,,
-1,A,,,,
-1,A,,,,
-1,Other,,,,
-1,Other,,,,
-1,Other,,,,
-1,Other,,,,
-1,Other,,,,
-1,Other,,,,
-1,B,,,,
-1,Other,,,,
-1,B,,,,
-1,Other,,,,
-1,Other,,,,
-1,B,,,,
-2,A,,,,
-2,B,,,,
-2,A,,,,
-2,Other,,,,
-2,A,,,,
-2,B,,,,
-2,Other,,,,
-2,Other,,,,
-2,B,,,,
-2,B,,,,
-2,Other,,,,
-2,B,,,,
-2,B,,,,
-2,Other,,,,
-2,Other,,,,
-2,A,,,,
-2,B,,,,
-2,A,,,,
-2,Other,,,,
-2,B,,,,
-2,Other,,,,
-2,Other,,,,
-2,A,,,,
-2,Other,,,,
-2,A,,,,
-2,B,,,,
-2,Other,,,,
-2,B,,,,
-2,Other,,,,
-2,B,,,,
-2,Other,,,,
-2,B,,,,
-2,A,,,,
-2,A,,,,
-2,Other,,,,
-2,B,,,,
-2,Other,,,,
-2,Other,,,,
-2,A,,,,
-2,B,,,,
-2,B,,,,
-2,Other,,,,
-2,Other,,,,
-2,Other,,,,
-2,Other,,,,
-2,B,,,,
-2,B,,,,
-2,B,,,,
-2,Other,,,,
-2,Other,,,,
-2,B,,,,
-2,B,,,,
-2,A,,,,
-2,Other,,,,
-2,B,,,,
-2,A,,,,
-2,A,,,,
-2,B,,,,
-2,Other,,,,
-2,Other,,,,
-2,Other,,,,
-2,B,,,,
-2,Other,,,,
-2,Other,,,,
-2,A,,,,
-2,Other,,,,
-2,A,,,,
-2,B,,,,
-2,B,,,,
-2,Other,,,,
-2,Other,,,,
-2,B,,,,
-2,Other,,,,
-2,A,,,,
-2,Other,,,,
-2,A,,,,
-2,Other,,,,
-2,Other,,,,
-2,Other,,,,
-2,Other,,,,
-2,Other,,,,
-2,A,,,,
-2,B,,,,
-2,A,,,,
-2,B,,,,
-2,B,,,,
-2,Other,,,,
-2,Other,,,,`;
-
-                // Parsing CSV data with PapaParse
-                Papa.parse(csvData, {
-                    header: true,
-                    skipEmptyLines: true,
-                    dynamicTyping: false,
-                    transformHeader: (header) => header.trim().replace(/^"|"$/g, ''),
-                    transform: (value, header) => {
-                        let cleaned = value.trim().replace(/^"|"$/g, '');
-                        return cleaned;
-                    },
-                    complete: (results) => {
-                        // Processing and cleaning data
-                        const processData = (data) => {
-                            const frequencies = [];
-                            const percentages = [];
-                            let inFreqSection = false;
-                            let inPercSection = false;
-
-                            data.forEach(row => {
-                                if (row[''] === 'Frequencies') {
-                                    inFreqSection = true;
-                                    inPercSection = false;
-                                    return;
-                                }
-                                if (row[''] === 'Percentages') {
-                                    inFreqSection = false;
-                                    inPercSection = true;
-                                    return;
-                                }
-                                if (inFreqSection && row[''] && row['Area 1'] && row['Area 2']) {
-                                    frequencies.push({
-                                        brand: row[''],
-                                        area1: parseFloat(row['Area 1']) || 0,
-                                        area2: parseFloat(row['Area 2']) || 0
-                                    });
-                                }
-                                if (inPercSection && row[''] && row['Area 1'] && row['Area 2']) {
-                                    percentages.push({
-                                        brand: row[''],
-                                        area1: parseFloat(row['Area 1']) || 0,
-                                        area2: parseFloat(row['Area 2']) || 0
-                                    });
-                                }
-                            });
-
-                            return { frequencies: frequencies.filter(f => f.brand !== 'Total'), percentages: percentages.filter(p => p.brand !== 'Total') };
-                        };
-
-                        const cleanedData = processData(results.data);
-                        setData(cleanedData);
-                        setLoading(false);
-                    },
-                    error: (err) => {
-                        console.error('Error parsing CSV:', err);
-                        setLoading(false);
-                    }
-                });
-            }, []);
-
-            // Rendering loading message
-            if (loading) {
-                return (
-                    <div className="flex justify-center items-center h-screen">
-                        <p className="text-xl text-gray-600">Loading data...</p>
-                    </div>
-                );
-            }
-
-            // Rendering main content
-            return (
-                <div className="container mx-auto p-6">
-                    {/* Displaying report title */}
-                    <h1 className="text-3xl font-bold text-gray-800 mb-6">Brand Preference Report</h1>
-
-                    {/* Rendering frequency table */}
-                    <div className="mb-8">
-                        <h2 className="text-xl font-semibold text-gray-700 mb-4">Frequencies</h2>
-                        <table className="w-full border-collapse border border-gray-300">
-                            <thead>
-                                <tr className="bg-gray-200">
-                                    <th className="border border-gray-300 p-2">Brand</th>
-                                    <th className="border border-gray-300 p-2">Area 1</th>
-                                    <th className="border border-gray-300 p-2">Area 2</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {data.frequencies.map((row, index) => (
-                                    <tr key={index} className="hover:bg-gray-100">
-                                        <td className="border border-gray-300 p-2">{row.brand}</td>
-                                        <td className="border border-gray-300 p-2 text-right">{row.area1}</td>
-                                        <td className="border border-gray-300 p-2 text-right">{row.area2}</td>
-                                    </tr>
-                                ))}
-                                <tr className="font-bold bg-gray-100">
-                                    <td className="border border-gray-300 p-2">Total</td>
-                                    <td className="border border-gray-300 p-2 text-right">{data.frequencies.reduce((sum, row) => sum + row.area1, 0)}</td>
-                                    <td className="border border-gray-300 p-2 text-right">{data.frequencies.reduce((sum, row) => sum + row.area2, 0)}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    {/* Rendering percentage table */}
-                    <div className="mb-8">
-                        <h2 className="text-xl font-semibold text-gray-700 mb-4">Percentages</h2>
-                        <table className="w-full border-collapse border border-gray-300">
-                            <thead>
-                                <tr className="bg-gray-200">
-                                    <th className="border border-gray-300 p-2">Brand</th>
-                                    <th className="border border-gray-300 p-2">Area 1</th>
-                                    <th className="border border-gray-300 p-2">Area 2</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {data.percentages.map((row, index) => (
-                                    <tr key={index} className="hover:bg-gray-100">
-                                        <td className="border border-gray-300 p-2">{row.brand}</td>
-                                        <td className="border border-gray-300 p-2 text-right">{row.area1.toFixed(2)}%</td>
-                                        <td className="border border-gray-300 p-2 text-right">{row.area2.toFixed(1)}%</td>
-                                    </tr>
-                                ))}
-                                <tr className="font-bold bg-gray-100">
-                                    <td className="border border-gray-300 p-2">Total</td>
-                                    <td className="border border-gray-300 p-2 text-right">100.00%</td>
-                                    <td className="border border-gray-300 p-2 text-right">100.0%</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    {/* Rendering bar chart for percentages */}
-                    <div className="mb-8">
-                        <h2 className="text-xl font-semibold text-gray-700 mb-4">Brand Preference by Area</h2>
-                        <div className="bg-white p-4 rounded-lg shadow">
-                            <Recharts.ResponsiveContainer width="100%" height={400}>
-                                <Recharts.BarChart data={data.percentages} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
-                                    <Recharts.CartesianGrid strokeDasharray="3 3" />
-                                    <Recharts.XAxis dataKey="brand" label={{ value: 'Brand', position: 'insideBottom', offset: -5, fontSize: 12 }} />
-                                    <Recharts.YAxis label={{ value: 'Percentage (%)', angle: -90, position: 'insideLeft', fontSize: 12 }} />
-                                    <Recharts.Tooltip formatter={(value) => `${value.toFixed(1)}%`} />
-                                    <Recharts.Legend />
-                                    <Recharts.Bar dataKey="area1" name="Area 1" fill="#4B5EAA" />
-                                    <Recharts.Bar dataKey="area2" name="Area 2" fill="#F28C38" />
-                                </Recharts.BarChart>
-                            </Recharts.ResponsiveContainer>
-                        </div>
-                    </div>
-
-                    {/* Rendering interpretation text */}
-                    <div className="mb-8">
-                        <h2 className="text-xl font-semibold text-gray-700 mb-4">Interpretation of Brand Preference Patterns</h2>
-                        <div className="bg-white p-4 rounded-lg shadow prose">
-                            <p>The bar chart for Area 2 illustrates the percentage distribution of brand preferences: Brand A (21.1%), Brand B (33.3%), and Other (45.6%). Comparing this to Area 1 (Brand A: 15.71%, Brand B: 24.29%, Other: 60%), the following patterns emerge:</p>
-                            <ul>
-                                <li><strong>Dominance of Other:</strong> In both areas, "Other" is the most preferred category, but its share is lower in Area 2 (45.6%) than in Area 1 (60%). This indicates that while "Other" remains popular, its dominance is less pronounced in Area 2.</li>
-                                <li><strong>Increased Preference for A and B:</strong> Area 2 shows higher preferences for Brand A (21.1% vs. 15.71%) and Brand B (33.3% vs. 24.29%) compared to Area 1. This suggests that these brands have a stronger foothold in Area 2.</li>
-                                <li><strong>Market Dynamics:</strong> The more balanced distribution in Area 2, with higher percentages for Brands A and B, points to a potentially more competitive market for these brands compared to Area 1, where "Other" has a larger lead. This could reflect differences in consumer preferences, marketing efforts, or brand availability between the two areas.</li>
-                            </ul>
-                            <p>These findings suggest that Brands A and B are more competitive in Area 2, which could guide targeted marketing strategies to further strengthen their presence in that region.</p>
-                        </div>
-                    </div>
-
-                    {/* Highlighting an interesting fact */}
-                    <div className="bg-blue-100 p-4 rounded-lg">
-                        <h3 className="text-lg font-semibold text-blue-800 mb-2">Interesting Fact</h3>
-                        <p className="text-gray-700">Area 2's more balanced brand preference distribution, with Brand B leading at 33.3%, suggests a vibrant competitive landscape. This could be an opportunity for Brands A and B to invest in targeted marketing campaigns to capture market share from the "Other" category, potentially reshaping consumer preferences in this region.</p>
-                    </div>
-                </div>
-            );
-        }
-
-        // Rendering the App component
-        root.render(<App />);
-    </script>
+    <!-- Interpretation Section -->
+    <div class="bg-white p-6 rounded-lg shadow-md">
+      <h2 class="text-xl font-bold text-gray-800 mb-4">Interpretation of Brand Preference Patterns</h2>
+      <p class="text-gray-600 mb-4">
+        The bar chart for Area 2 illustrates the percentage distribution of brand preferences: Brand A (21.1%), Brand B (33.3%), and Other (45.6%). Comparing this to Area 1 (Brand A: 15.71%, Brand B: 24.29%, Other: 60%), the following patterns emerge:
+      </p>
+      <ul class="list-disc list-inside text-gray-600 mb-4">
+        <li><strong>Dominance of Other:</strong> In both areas, "Other" is the most preferred category, but its share is lower in Area 2 (45.6%) than in Area 1 (60%). This indicates that while "Other" remains popular, its dominance is less pronounced in Area 2.</li>
+        <li><strong>Increased Preference for A and B:</strong> Area 2 shows higher preferences for Brand A (21.1% vs. 15.71%) and Brand B (33.3% vs. 24.29%) compared to Area 1. This suggests that these brands have a stronger foothold in Area 2.</li>
+        <li><strong>Market Dynamics:</strong> The more balanced distribution in Area 2, with higher percentages for Brands A and B, points to a potentially more competitive market for these brands compared to Area 1, where "Other" has a larger lead. This could reflect differences in consumer preferences, marketing efforts, or brand availability between the two areas.</li>
+      </ul>
+      <p class="text-gray-600">
+        These findings suggest that Brands A and B are more competitive in Area 2, which could guide targeted marketing strategies to further strengthen their presence in that region.
+      </p>
+    </div>
+  </div>
 </body>
 </html>
